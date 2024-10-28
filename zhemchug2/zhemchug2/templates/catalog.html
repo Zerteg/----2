@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог услуг - Жемчуг</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="media/logo.jpg" alt="Логотип" height="60" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="forms/login.html">Вход</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="forms/register.html">Регистрация</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Заголовок страницы -->
+    <header class="bg-light text-center py-3">
+        <div class="container">
+            <h1>Каталог услуг</h1>
+            <p id="headerDescription">Найдите необходимую услугу стоматологической клиники</p>
+        </div>
+    </header>
+
+    <section class="container my-4"> <!-- Уменьшил отступы -->
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form id="searchForm" class="d-flex">
+                    <input type="text" id="searchInput" class="form-control form-control-lg" placeholder="Поиск услуг..." aria-label="Поиск услуг">
+                    <button type="submit" class="btn btn-primary btn-lg ms-3">Поиск</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Каталог товаров/услуг -->
+    <section class="container my-5">
+        <h2>Наши услуги</h2>
+        <div class="row" id="productCatalog">
+            <!-- Динамически добавляемые карточки товаров будут отображаться здесь -->
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Стоматологическая клиника Жемчуг. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Скрипт для динамической загрузки товаров/услуг -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const productCatalog = document.getElementById('productCatalog');
+            const searchForm = document.getElementById('searchForm');
+            const searchInput = document.getElementById('searchInput');
+
+        
+            // Пример данных услуг (в будущем можно заменить на данные из API)
+            const services = [
+    { id: 1, title: 'Профессиональная чистка зубов', description: 'Услуга для поддержания здоровья зубов.', imageUrl: 'media/cleaning.jpg' },
+    { id: 2, title: 'Лечение пульпита', description: 'Качественное лечение пульпита', imageUrl: 'media/pulpit.jpg' },
+    { id: 3, title: 'Лечение кариеса', description: 'Качественное лечение кариеса зубов.', imageUrl: 'media/caries.jpg' },
+    { id: 4, title: 'Отбеливание зубов', description: 'Современные методы отбеливания зубов.', imageUrl: 'media/whitening.jpg' },
+    { id: 5, title: 'Имплантация зубов', description: 'Высококачественные зубные имплантаты из германии.', imageUrl: 'media/i.webp' },
+    { id: 6, title: 'Исправление прикуса', description: 'Исправления прикуса и выравнивания зубов.', imageUrl: 'media/orthodontics.jpg' }
+];
+
+            // Функция отображения услуг
+            function displayServices(services) {
+                productCatalog.innerHTML = ''; // Очистить каталог перед обновлением
+                services.forEach(service => {
+                    const card = `
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="${service.imageUrl}" class="card-img-top" alt="${service.title}">
+                                <div class="card-body">
+                                    <h5 class="card-title">${service.title}</h5>
+                                    <p class="card-text">${service.description}</p>
+                                    <a href="product.html?id=${service.id}" class="btn btn-primary">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    `;//<a href="service.html?id=${service.id}" class="btn btn-primary">Подробнее</a> после строки 101 
+                    productCatalog.innerHTML += card;
+                });
+            }
+
+            // Изначально отображаем все услуги
+            displayServices(services);
+
+            // Обработка поиска
+            searchForm.addEventListener('submit', function(e) {
+                e.preventDefault(); // Предотвращаем перезагрузку страницы
+                const searchValue = searchInput.value.toLowerCase();
+                const filteredServices = services.filter(service =>
+                    service.title.toLowerCase().includes(searchValue)
+                );
+                displayServices(filteredServices);
+            });
+        });
+    </script>
+</body>
+</html>

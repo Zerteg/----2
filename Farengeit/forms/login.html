@@ -1,0 +1,130 @@
+<!-- <div id="authModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title">Вход / Регистрация</h2>
+            <span class="close" onclick="closeModal()">&times;</span>
+        </div>
+        <div class="modal-body">
+            <form id="authForm" method="post" action="/auth" novalidate>
+                <div class="form-group">
+                    <label for="username" class="required">Логин <span class="required-star">*</span></label>
+                    <input type="text" id="username" name="username" class="form-control" required maxlength="50">
+                </div>
+                <div class="form-group">
+                    <label for="password" class="required">Пароль <span class="required-star">*</span></label>
+                    <input type="password" id="password" name="password" class="form-control" required maxlength="50">
+                </div>
+                <div class="form-footer">
+                    <div class="remember-me">
+                        <input type="checkbox" id="rememberMe" name="rememberMe">
+                        <label for="rememberMe">Запомнить меня</label>
+                    </div>
+                    <a href="/auth/forgot-password" class="forgot-password">Забыли пароль?</a>
+                </div>
+                <div class="modal-actions">
+                    <button type="submit" class="btn btn-primary">Войти</button>
+                    <button type="button" class="btn btn-secondary" onclick="showRegistration()">Регистрация</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function closeModal() {
+        document.getElementById('authModal').style.display = 'none';
+    }
+    
+    function showRegistration() {
+        // Логика для переключения на форму регистрации
+        alert('Показать форму регистрации');
+    }
+</script>
+
+<style>
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+        background-color: #fff;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 400px;
+        border-radius: 5px;
+    }
+
+    .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .modal-title {
+        font-size: 24px;
+    }
+
+    .close {
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .required {
+        color: red;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .form-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .modal-actions {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .btn {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        color: white;
+    }
+
+    .forgot-password {
+        text-decoration: none;
+        color: #007bff;
+    }
+</style> -->
