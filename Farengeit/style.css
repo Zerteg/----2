@@ -48,9 +48,21 @@ a:hover {
 .navbar-nav .nav-link:hover {
     color: #ec2142; /* Подсветка при наведении */
 }
+.navbar-nav .nav-link i {
+    margin-right: 7px; /* Отступ справа от иконки */
+}
 
 .navbar-toggler {
     border-color: #0056b3;
+}
+
+.card {
+    text-align: center; /* Центрирование текста в карточке */
+}
+
+.card-img-top {
+    max-width: 100%; /* Установить максимальную ширину изображения */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
 }
 
 /* Стили для хедера */
@@ -65,8 +77,9 @@ header {
 
 header h1 {
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 520;
     margin-bottom: 10px;
+    font-family: 'Georgia', 'Verdana', serif;
 }
 
 header p {
@@ -103,7 +116,8 @@ section {
 }
 
 section h2 {
-    color: #003366;
+    color: #000000;
+    font-family: 'Arial', 'Verdana', sans-serif;
     margin-bottom: 30px;
     font-size: 2rem;
     border-bottom: 2px solid #e6e6e6;
@@ -111,9 +125,13 @@ section h2 {
 }
 
 section p {
-    font-size: 1.1rem;
     line-height: 1.8;
+    color: #404448;
+    font-family: 'Georgia', 'Verdana', serif;
     margin-bottom: 20px;
+    font-size: 1.1rem;
+    border-bottom: 2px solid #e6e6e6;
+    padding-bottom: 2px;
 }
 
 section ul {
@@ -121,15 +139,60 @@ section ul {
     padding: 0;
 }
 
+section label {
+    color: #000000;
+    font-family: 'Georgia', 'Verdana', serif;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    border-bottom: 2px solid #e6e6e6;
+    padding-bottom: 2px;
+}
+
+section input {
+    color: #000000;
+    font-family: 'Georgia', 'Verdana', serif;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    border-bottom: 2px solid #e6e6e6;
+    padding-bottom: 2px;
+} 
+
+#search-icon {
+    height: 100%; /* Подстраивает высоту значка под высоту input */
+    padding: 0.5rem; /* Внутренний отступ для выравнивания значка */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#searchForm .input-group-text i {
+    font-size: 1.25rem; /* Размер значка под поле ввода */
+}
+
+
+section button {
+    color: #000000;
+    font-family: 'Georgia', 'Verdana', serif;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    border-bottom: 2px solid #e6e6e6;
+    padding-bottom: 2px;
+}
+
+section span{
+    color: #ff0000;
+}
+
 section ul li {
     font-size: 1.1rem;
+    color: #555b61;
     margin-bottom: 10px;
     padding-left: 20px;
     position: relative;
 }
 
 section ul li::before {
-    content: '✓';
+    content: '°';
     color: #007bff;
     position: absolute;
     left: 0;
