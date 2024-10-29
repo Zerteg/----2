@@ -27,7 +27,9 @@ a:hover {
     background-color: #ffffff; /* Белый фон для чистоты и элегантности */
     border-bottom: 2px solid #e6e6e6;
     padding: 15px 0;
+    
 }
+
 
 .navbar-brand img {
     max-height: 60px;
@@ -44,12 +46,27 @@ a:hover {
 }
 
 
+.navbar-limited-width {
+    max-width: 700px; /* Установите нужное значение */
+    width: 100%; /* Автоматически адаптируется под экран */
+    overflow: hidden; /* Прячет излишки, если кнопки не умещаются */
+}
+
+
+
 
 .navbar-nav .nav-link:hover {
     color: #ec2142; /* Подсветка при наведении */
+
 }
 .navbar-nav .nav-link i {
     margin-right: 7px; /* Отступ справа от иконки */
+    
+}
+
+.navbar-nav lii {
+    margin-right: 10px; /* Отступ справа от иконки */
+    
 }
 
 .navbar-toggler {
@@ -119,6 +136,7 @@ section h2 {
     color: #000000;
     font-family: 'Arial', 'Verdana', sans-serif;
     margin-bottom: 30px;
+     margin-top: 20px;
     font-size: 2rem;
     border-bottom: 2px solid #e6e6e6;
     padding-bottom: 10px;
@@ -129,9 +147,16 @@ section p {
     color: #404448;
     font-family: 'Georgia', 'Verdana', serif;
     margin-bottom: 20px;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     border-bottom: 2px solid #e6e6e6;
     padding-bottom: 2px;
+}
+
+section pp {
+    line-height: 1.8;
+    color: #404448;
+    font-family: 'Georgia', 'Verdana', serif;
+    font-size: 1.1rem;
 }
 
 section ul {
@@ -185,7 +210,8 @@ section span{
 
 section ul li {
     font-size: 1.1rem;
-    color: #555b61;
+    font-family: 'Georgia', 'Verdana', serif;
+    color: #404448;
     margin-bottom: 10px;
     padding-left: 20px;
     position: relative;
@@ -246,4 +272,6 @@ footer p {
         font-size: 1rem;
     }
 }
+
+
 
