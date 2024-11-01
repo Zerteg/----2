@@ -3,7 +3,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8; /* Легкий серый для фона */
+    background-color: #3387db62; /* Легкий серый для фона */
     color: #333; /* Тёмный текст для хорошей читаемости */
 }
 
@@ -11,6 +11,9 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
     color: #003366; /* Тёмный синий для заголовков */
 }
+
+
+
 
 a {
     color: #007bff;
@@ -29,6 +32,28 @@ a:hover {
     padding: 15px 0;
     
 }
+
+.phone-number{
+    color: #0972ea;
+    
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    
+}
+
+.email{
+    
+    text-decoration: underline;
+    margin: 20px;
+    margin-top: 0;
+}
+
+.icon{
+    margin-top: 10px;
+}
+
+
 
 
 .navbar-brand img {
@@ -237,12 +262,19 @@ section .btn-outline-primary:hover {
 }
 
 /* Футер */
+
+
 footer {
     background-color: rgb(255, 255, 255); /* Цвет фона футера */
     color: #2374df;
     padding: 20px 0;
     font-size: 0.9rem;
     border-top: 2px solid #e6e6e6; /* Граница сверху для отделения от основного контента */
+    position: fixed; /* Фиксируем футер внизу экрана */
+    left: 0;
+    right: 0;
+    bottom: 0; /* Прикрепляем футер к нижней части экрана */
+    z-index: 100;
 }
 
 
@@ -275,3 +307,81 @@ footer p {
 
 
 
+
+
+html {
+    height: 100%;
+  }
+  
+  
+  
+  .loader {
+    position: relative;
+    top: calc(60% - 32px);
+    left: calc(50% - 32px);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    perspective: 800px;
+    margin-top: 140px;
+  }
+  
+
+
+  .inner {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;  
+  }
+  
+  .inner.one {
+    left: 0%;
+    top: 0%;
+    animation: rotate-one 1s linear infinite;
+    border-bottom: 3px solid #0505ff;
+  }
+  
+  .inner.two {
+    right: 0%;
+    top: 0%;
+    animation: rotate-two 1s linear infinite;
+    border-right: 3px solid #f60000;
+  }
+  
+  .inner.three {
+    right: 0%;
+    bottom: 0%;
+    animation: rotate-three 1s linear infinite;
+    border-top: 3px solid #EFEFFA;
+  }
+  
+  @keyframes rotate-one {
+    0% {
+      transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    }
+  }
+  
+  @keyframes rotate-two {
+    0% {
+      transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    }
+  }
+  
+  @keyframes rotate-three {
+    0% {
+      transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+    }
+  }
+
+  

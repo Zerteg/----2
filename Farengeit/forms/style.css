@@ -3,7 +3,7 @@ body, html {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8; /* Легкий серый для фона */
+    background-color: #3387db62; /* Легкий серый для фона */
     color: #333; /* Тёмный текст для хорошей читаемости */
     height: 100%; /* Занимает всё окно браузера */
     display: flex;
@@ -65,6 +65,13 @@ a:hover {
 
 .col-md-6 {
     max-width: 400px; /* Установите нужное значение ширины */
+}
+
+.email{
+    
+    text-decoration: underline;
+    margin: 20px;
+    margin-top: 0;
 }
 
 /* Стили для хедера */
@@ -180,11 +187,11 @@ footer {
     padding: 20px 0;
     font-size: 0.9rem;
     border-top: 2px solid #e6e6e6; /* Граница сверху для отделения от основного контента */
-    text-align: center;
-    width: 100%;
-    position: relative;
-    /* Ставим футер вниз страницы */
-    margin-top: auto;
+    position: fixed; /* Фиксируем футер внизу экрана */
+    left: 0;
+    right: 0;
+    bottom: 0; /* Прикрепляем футер к нижней части экрана */
+    z-index: 100;
 }
 
 

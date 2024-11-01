@@ -9,33 +9,27 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <!-- Навигация -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <div class="container">
-            <a class="navbar-brand" href="../index.html">
-                <img src="../media/logo.png" alt="Логотип" height="45" class="d-inline-block align-text-top">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html"><i class="bi bi-compass"></i> Главная</a></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../catalog.html"><i class="bi bi-list-ul"></i> Каталог</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Вход</a></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="register.html"><i class="bi bi-person-plus"></i> Регистрация</a>
-                    </li>
-                </ul>
-            </div>
+<!-- Навигация -->
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container d-flex align-items-center">
+        <a class="navbar-brand me-4" href="index.html">
+            <img src="../media/logo.png" alt="Логотип" height="45" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-5">
+                <li class="nav-item icon"><a class="nav-link" href="../index.html"><i class="bi bi-compass"></i> Главная</a></a></li>
+                <li class="nav-item icon"><a class="nav-link" href="../catalog.html"><i class="bi bi-telephone"></i> Каталог</a></li>
+                <li class="nav-item icon"><a class="nav-link" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Вход</a></li>
+                <li class="nav-item icon"><a class="nav-link" href="register.html"><i class="bi bi-person-plus"></i> Регистрация</a></li>
+                <li> <a href="tel:+74954778667">+7 (495) 477-86-67</a></li>
+                <li class="nav-item me-4 email">info+10020738@farengeit-online.ru</li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <!-- Форма авторизации -->
     <section class="container my-5">
@@ -65,11 +59,12 @@
     <br>    
 
     <!-- Футер -->
-    <footer class="text-center py-3">
-        <div class="container">
-            <p>&copy; 2024 Стоматологическая клиника Жемчуг. Все права защищены.</p>
-        </div>
-    </footer>
+    <BR>
+        <footer class="text-center py-3">
+            <div class="container">
+                <p>&copy; 2024 Магазин сантехники "Фаренгейт". Все права защищены.</p>
+            </div>
+        </footer>
 
     <script>
         document.getElementById('loginForm').addEventListener('submit', function(event) {
