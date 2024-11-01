@@ -14,7 +14,6 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-
 a {
     color: #007bff;
     text-decoration: none;
@@ -79,7 +78,6 @@ a:hover {
 
 
 
-
 .navbar-nav .nav-link:hover {
     color: #ec2142; /* Подсветка при наведении */
 
@@ -131,9 +129,20 @@ header p {
     transition: color 0.1s ease-in-out; /* Плавный переход цвета */
 }
 
+header k {
+    font-size: 3rem;
+    margin-bottom: 3px;
+    color: #333; /* Цвет текста скрытого */
+    transition: color 0.4s ease-in-out; /* Плавный переход цвета */
+}
+
 /* Изменение цвета текста при наведении */
 header p:hover {
     color: #ec2142; /* Тёмный цвет при наведении */
+}
+
+header k:hover{
+    color: #3996f3; /* Тёмный цвет при наведении */
 }
 
 header .btn {
@@ -159,7 +168,7 @@ section {
 
 section h2 {
     color: #000000;
-    font-family: 'Arial', 'Verdana', sans-serif;
+    font-family: 'Playfair Display', serif;
     margin-bottom: 30px;
      margin-top: 20px;
     font-size: 2rem;
